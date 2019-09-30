@@ -1,4 +1,4 @@
-﻿@model HomeViewModel<Connection>;
+﻿@model HomeViewModel<Session>;
 @using System.Reflection;
 
 <div class="card flex-grow-1">
@@ -17,12 +17,12 @@
         </thead>
 
         <tbody>
-            @foreach (Connection connection in Model.Records)
+            @foreach (Session session in Model.Records)
             {
                 <tr>
                     @foreach (PropertyInfo info in Model.Properties)
                     {
-                        <td>@Model.GetValueForRecord(connection, info.Name)</td>
+                        <td>@Model.GetValueForRecord(session, info.Name)</td>
                     }
                 </tr>
             }

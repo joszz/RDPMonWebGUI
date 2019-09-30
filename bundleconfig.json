@@ -1,0 +1,16 @@
+[
+  {
+    "outputFileName": "wwwroot/js/site.min.js",
+    "inputFiles": [
+      "wwwroot/lib/jquery/dist/jquery.js",
+      "wwwroot/js/site.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true,
+      "commentMode": "none",
+      "preserveImportantComments": false
+    },
+    "sourceMap": true
+  }
+]
