@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\css\vendor\**" />
+    <Content Remove="wwwroot\css\vendor\**" />
+    <EmbeddedResource Remove="wwwroot\css\vendor\**" />
+    <None Remove="wwwroot\css\vendor\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LiteDB" Version="4.1.4" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\css\" />
+    <Folder Include="wwwroot\js\" />
+    <Folder Include="wwwroot\lib\" />
+  </ItemGroup>
+
+</Project>

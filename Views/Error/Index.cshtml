@@ -1,0 +1,7 @@
+﻿@model ErrorViewModel
+
+@{
+    ViewData["Title"] = $"Error - {Model.StatusCode}";
+}
+
+<h2 class="text-danger">@Model.ErrorMessage</h2>

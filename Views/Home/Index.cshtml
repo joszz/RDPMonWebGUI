@@ -1,0 +1,14 @@
+﻿@model List<Connection>;
+
+<div class="text-center">
+    <table>
+        @foreach (Connection connection in Model)
+        {
+        <tr>
+            <td>@connection._id</td>
+            <td>@connection.FailCount</td>
+            <td>@connection.SuccessCount</td>
+        </tr>
+        }
+    </table>
+</div>
