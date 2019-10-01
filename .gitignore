@@ -55,3 +55,8 @@ obj
 bin
 Web.config
 wwwroot/lib
+Properties/launchSettings.json
+site.min.js
+site.css
+site.min.css
+appsettings.json
