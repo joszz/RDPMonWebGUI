@@ -46,8 +46,9 @@ namespace RDPMonWebGUI
                 app.UseHsts();
             }
 
+            app.UseSecurityHeaders();
             app.UseStatusCodePagesWithReExecute("/Error", "?code={0}");
-            app.UseDefaultFiles();
+            //app.UseDefaultFiles();
             app.UseStaticFiles(new StaticFileOptions
             {
                 OnPrepareResponse = ctx =>
@@ -58,8 +59,6 @@ namespace RDPMonWebGUI
             });
 
             app.UseRouting();
-
-            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

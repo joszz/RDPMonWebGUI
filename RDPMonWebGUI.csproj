@@ -21,7 +21,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Middleware\" />
     <Folder Include="wwwroot\lib\" />
+    <Folder Include="wwwroot\fonts\" />
   </ItemGroup>
 
 </Project>

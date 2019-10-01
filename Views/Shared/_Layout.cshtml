@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@{
+    string action = ViewContext.RouteData.Values["Action"].ToString();
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -31,10 +34,10 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Home" asp-action="Index">Connections</a>
+                            <a class="nav-link @(action == "Index" ? "active" : null )" asp-controller="Home" asp-action="Index">Connections</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Home" asp-action="Sessions">Sessions</a>
+                            <a class="nav-link @(action == "Sessions" ? "active" : null )" asp-controller="Home" asp-action="Sessions">Sessions</a>
                         </li>
                     </ul>
                 </div>
@@ -42,13 +45,13 @@
         </nav>
     </header>
 
-    <div class="container flex-grow-1">
-        <main role="main" class="pb-3 pt-3">
+    <div class="container h-100">
+        <main role="main" class="pb-3 pt-3 h-100">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="navbar navbar-dark bg-dark">
         <div class="container">
             &copy; @DateTime.Now.Year - RDPMonWebGUI
         </div>

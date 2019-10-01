@@ -1,4 +1,23 @@
 ﻿html, body {
-    min-height: 100% !important;
     height: 100%;
+}
+
+footer{
+    color: #FFF;
+}
+
+.table th a {
+    float: left;
+    width: 100%;
+    display: block;
+    white-space: nowrap;
+}
+
+.table th a span {
+    font-family: $font-family-base;
+    font-weight: bold;
+}
+
+ul.pagination{
+    margin: 0.5rem 0;
 }
