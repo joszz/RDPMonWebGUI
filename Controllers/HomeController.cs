@@ -3,8 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using RDPMonWebGUI.Models;
 using RDPMonWebGUI.ViewModels;
-using System.Collections.Generic;
-using System.Linq;
+using System.Linq; 
 
 namespace RDPMonWebGUI.Controllers
 {
@@ -22,15 +21,10 @@ namespace RDPMonWebGUI.Controllers
 
         public IActionResult Index(HomeViewModel viewModel)
         {
-            List<Connection> test = _database.GetCollection<Connection>("Addr").FindAll().ToList();
-            test.AddRange(test);
-            test.AddRange(test);
-            test.AddRange(test);
-
             viewModel.Title = "Connections";
             viewModel.PageSize = _pageSize;
             viewModel.ModelType = typeof(Connection);
-            viewModel.Records = viewModel.SetOrderAndPaging(test);
+            viewModel.Records = viewModel.SetOrderAndPaging(_database.GetCollection<Connection>("Addr").FindAll().ToList());
             
             return View("Index", viewModel);
         }

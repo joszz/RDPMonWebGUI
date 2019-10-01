@@ -35,14 +35,17 @@
         </table>
     </div>
 
-    <nav>
-        <ul class="pagination justify-content-center">
-            @for (int i = Model.PaginatorStart; i <= Model.PaginatorEnd; i++)
-            {
-                <li class="page-item @(Model.Page == i ? "active" : null)">
-                    <a class="page-link" asp-route-Page="@i" asp-route-SortField="@Model.SortField" asp-route-SortDirection="@Model.SortDirection">@i</a>
-                </li>
-            }
-        </ul>
-    </nav>
+    @if (Model.PageCount > 1)
+    {
+        <nav>
+            <ul class="pagination justify-content-center">
+                @for (int i = Model.PaginatorStart; i <= Model.PaginatorEnd; i++)
+                {
+                    <li class="page-item @(Model.Page == i ? "active" : null)">
+                        <a class="page-link" asp-route-Page="@i" asp-route-SortField="@Model.SortField" asp-route-SortDirection="@Model.SortDirection">@i</a>
+                    </li>
+                }
+            </ul>
+        </nav>
+    }
 </div>
