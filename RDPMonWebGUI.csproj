@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
   </PropertyGroup>
 
   <ItemGroup>
@@ -22,8 +23,16 @@
 
   <ItemGroup>
     <Folder Include="Middleware\" />
-    <Folder Include="wwwroot\lib\" />
     <Folder Include="wwwroot\fonts\" />
+    <Folder Include="wwwroot\lib\bootstrap\" />
   </ItemGroup>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="build-pre.cmd" />
+  </Target>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="build-post.cmd" />
+  </Target>
 
 </Project>

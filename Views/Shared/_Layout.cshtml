@@ -12,7 +12,9 @@
     <environment include="Development">
         <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 
-        <script defer src="~/lib/jquery/dist/jquery.js"></script>
+        <script defer src="~/lib/jquery/dist/jquery.js" asp-append-version="true"></script>
+        <script defer src="~/lib/bootstrap/js/dist/util.js" asp-append-version="true"></script>
+        <script defer src="~/lib/bootstrap/js/dist/collapse.js" asp-append-version="true"></script>
         <script defer src="~/js/site.js" asp-append-version="true"></script>
     </environment>
     <environment exclude="Development">
@@ -27,11 +29,11 @@
             <div class="container">
                 <a class="navbar-brand" asp-controller="Home" asp-action="Index">RDPMonWebGUI</a>
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                <div class="collapse navbar-collapse" id="navbar-content">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
                             <a class="nav-link @(action == "Index" ? "active" : null )" asp-controller="Home" asp-action="Index">Connections</a>

@@ -1,8 +1,10 @@
-[
+﻿[
   {
     "outputFileName": "wwwroot/js/site.min.js",
     "inputFiles": [
       "wwwroot/lib/jquery/dist/jquery.js",
+      "wwwroot/lib/bootstrap/js/dist/util.js",
+      "wwwroot/lib/bootstrap/js/dist/collapse.js",
       "wwwroot/js/site.js"
     ],
     "minify": {
