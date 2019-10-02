@@ -27,6 +27,8 @@ namespace RDPMonWebGUI.ViewModels
 
         public int PageCount { get; set; }
 
+        public Type ModelType { get; set; }
+
         public List<object> Records { get; set; }
 
         private List<object> _recordsPaged;
@@ -42,8 +44,6 @@ namespace RDPMonWebGUI.ViewModels
                 return _recordsPaged;
             }
         }
-
-        public Type ModelType { get; set; }
 
         private List<PropertyInfo> _properties;
         public List<PropertyInfo> Properties
@@ -77,6 +77,8 @@ namespace RDPMonWebGUI.ViewModels
                 return _headers;
             }
         }
+
+        public List<RecordActionButton> RecordActionButtons { get; set; } = new List<RecordActionButton>();
         #endregion
 
         #region Methods

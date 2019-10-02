@@ -15,18 +15,30 @@ footer {
     color: #FFF;
 }
 
-.table th a {
+th a {
     float: left;
     width: 100%;
     display: block;
     white-space: nowrap;
 }
 
-.table th a span {
+th a span {
     font-family: $font-family-base;
     font-weight: bold;
 }
 
 ul.pagination {
     margin: 0.5rem 0;
+}
+
+.fancybox-slide--iframe .fancybox-content {
+    width: 600px;
+    height: 600px;
+    max-width: 80%;
+    max-height: 80%;
+    margin: 0;
+}
+
+.fancybox-active {
+    height: 100% !important;
 }

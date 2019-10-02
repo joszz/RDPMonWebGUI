@@ -20,6 +20,10 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-cogs:before {
+    content: '\f085';
+}
+
 .icon-sort-down:after {
     content: '\f0dd';
 }

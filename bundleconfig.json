@@ -5,6 +5,7 @@
       "wwwroot/lib/jquery/dist/jquery.js",
       "wwwroot/lib/bootstrap/js/dist/util.js",
       "wwwroot/lib/bootstrap/js/dist/collapse.js",
+      "wwwroot/lib/fancybox/jquery.fancybox.js",
       "wwwroot/js/site.js"
     ],
     "minify": {

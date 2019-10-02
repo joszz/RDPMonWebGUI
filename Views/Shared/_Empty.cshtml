@@ -1,0 +1,31 @@
+﻿@{
+    string action = ViewContext.RouteData.Values["Action"].ToString();
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - RDPMonWebGUI</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/fancybox/jquery.fancybox.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+        <script defer src="~/lib/jquery/dist/jquery.js" asp-append-version="true"></script>
+        <script defer src="~/lib/bootstrap/js/dist/util.js" asp-append-version="true"></script>
+        <script defer src="~/lib/bootstrap/js/dist/collapse.js" asp-append-version="true"></script>
+        <script defer src="~/lib/fancybox/jquery.fancybox.js" asp-append-version="true"></script>
+        <script defer src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="~/lib/fancybox/jquery.fancybox.min.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+
+        <script defer src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+</head>
+<body>
+    @RenderBody()
+</body>
+</html>

@@ -18,16 +18,28 @@
                             </a>
                         </th>
                     }
+
+                    @if (Model.RecordActionButtons.Count != 0)
+                    {
+                        <th class="text-right">Actions</th>
+                    }
                 </tr>
             </thead>
 
             <tbody>
-                @foreach (object record in Model.RecordsPaged)
+                @foreach (IModel record in Model.RecordsPaged)
                 {
                     <tr>
                         @foreach (PropertyInfo info in Model.Properties)
                         {
                             <td>@Model.GetValueForRecord(record, info.Name)</td>
+                        }
+
+                        @foreach (RecordActionButton btn in Model.RecordActionButtons)
+                        {
+                            <td class="text-right">
+                                <a href="@Url.ActionLink(btn.Action, btn.Controller, new { id = record.Id })" @(string.Join(' ', btn.Attributes)) class="@btn.CssClass"></a>
+                            </td>
                         }
                     </tr>
                 }

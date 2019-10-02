@@ -4,10 +4,19 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RDPMonWebGUI.Models
 {
-    public class Session
+    public class Session : IModel
     {
         [NotMapped]
         public long _id { get; set; }
+
+        [NotMapped]
+        public object Id
+        {
+            get
+            {
+                return _id;
+            }
+        }
 
         [NotMapped]
         public long Flags { get; set; }

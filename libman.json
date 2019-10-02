@@ -131,6 +131,17 @@
         "dist/jquery.min.js",
         "dist/jquery.min.map"
       ]
+    },
+    {
+      "provider": "cdnjs",
+      "library": "fancybox@3.5.7",
+      "destination": "wwwroot/lib/fancybox/",
+      "files": [
+        "jquery.fancybox.min.js",
+        "jquery.fancybox.css",
+        "jquery.fancybox.js",
+        "jquery.fancybox.min.css"
+      ]
     }
   ]
 }

@@ -4,10 +4,19 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RDPMonWebGUI.Models
 {
-    public class Connection
+    public class Connection : IModel
     {
         [DisplayName("IP")]
         public string _id { get; set; }
+
+        [NotMapped]
+        public object Id
+        {
+            get
+            {
+                return _id;
+            }
+        }
 
         [NotMapped]
         public long Type { get; set; }
