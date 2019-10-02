@@ -10,8 +10,6 @@ namespace RDPMonWebGUI.ViewModels
 
         public string CssClass { get; set; }
 
-        public List<object> ActionAttributes { get; set; } = new List<object>();
-
         public List<string> Attributes { get; set; } = new List<string>();
     }
 }

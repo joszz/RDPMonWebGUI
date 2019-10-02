@@ -28,6 +28,5 @@ namespace RDPMonWebGUI.Models
 
         [DisplayName("Session ID")]
         public long WtsSessionId { get; set; }
-
     }
 }

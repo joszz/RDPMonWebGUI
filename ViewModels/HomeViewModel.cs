@@ -15,7 +15,7 @@ namespace RDPMonWebGUI.ViewModels
 
         public string SortField { get; set; }
 
-        public string SortDirection { get; set; }
+        public string SortDirection { get; set; } = "desc";
 
         public int Page { get; set; } = 1;
 

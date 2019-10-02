@@ -2,6 +2,11 @@
 
 $(function () {
     $(".fb-frame").fancybox({
-        defaultType: "iframe"
+        defaultType: "iframe",
+        iframe: {
+            css: {
+                width: '1000px'
+            }
+        }
     });
 });
