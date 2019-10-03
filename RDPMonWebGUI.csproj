@@ -28,12 +28,12 @@
     <Folder Include="wwwroot\lib\bootstrap\" />
   </ItemGroup>
 
-  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-    <Exec Command="build-pre.cmd" />
-  </Target>
-
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
     <Exec Command="build-post.cmd" />
+  </Target>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="build-pre.cmd" />
   </Target>
 
 </Project>
