@@ -1,6 +1,6 @@
 ﻿@{
     string action = ViewContext.RouteData.Values["Action"].ToString();
-    string homeLink = Url.ActionLink("Index", "Home") + "/";
+    string homeLink = Url.RouteUrl("home") + "/";
 }
 <!DOCTYPE html>
 <html lang="en">
