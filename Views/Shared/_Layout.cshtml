@@ -1,5 +1,6 @@
 ﻿@{
     string action = ViewContext.RouteData.Values["Action"].ToString();
+    string homeLink = Url.ActionLink("Index", "Home") + "/";
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -29,7 +30,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" asp-controller="Home" asp-action="Index">RDPMonWebGUI</a>
+                <a class="navbar-brand" href="@homeLink">RDPMonWebGUI</a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content">
                     <span class="navbar-toggler-icon"></span>
@@ -38,7 +39,7 @@
                 <div class="collapse navbar-collapse" id="navbar-content">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link @(action == "Index" ? "active" : null )" asp-controller="Home" asp-action="Index">Connections</a>
+                            <a class="nav-link @(action == "Index" ? "active" : null )" href="@homeLink">Connections</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link @(action == "Sessions" ? "active" : null )" asp-controller="Home" asp-action="Sessions">Sessions</a>
