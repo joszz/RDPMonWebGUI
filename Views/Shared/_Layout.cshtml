@@ -1,6 +1,6 @@
 ﻿@{
     string action = ViewContext.RouteData.Values["Action"].ToString();
-    string homeLink = Url.ActionLink("Index", "Home") + "/";
+    string homeLink = "/";
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -25,6 +25,8 @@
 
         <script defer src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
+
+    <partial name="_Favicons" />
 </head>
 <body class="d-flex flex-column">
     <header>

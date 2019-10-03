@@ -24,6 +24,7 @@
   <ItemGroup>
     <Folder Include="Middleware\" />
     <Folder Include="wwwroot\fonts\" />
+    <Folder Include="wwwroot\img\favicons\" />
     <Folder Include="wwwroot\lib\bootstrap\" />
   </ItemGroup>
 
