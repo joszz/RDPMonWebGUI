@@ -43,7 +43,9 @@ All the settings are defined in the file *appsettings.json*, which can be found 
 Below you find a brief description per setting that is of significance.
 
 * **ConnectionStrings**
+
     This is an essential setting and the value should point to the location of the RdpMon.db.
 
 * **PageSize**
+
     This setting controls how many items per page are shown.
