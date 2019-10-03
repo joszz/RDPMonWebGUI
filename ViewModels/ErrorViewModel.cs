@@ -1,5 +1,4 @@
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace RDPMonWebGUI.Models
 {
@@ -7,7 +6,7 @@ namespace RDPMonWebGUI.Models
     {
         private Dictionary<int, string> StatusCodeMessages { get; set; } = new Dictionary<int, string>
         {
-            { 404, "Pagina is niet gevonden!"}
+            { 404, "Page not found!"}
         };
 
         public int StatusCode { get; set; }

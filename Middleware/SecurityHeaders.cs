@@ -14,7 +14,6 @@ namespace RDPMonWebGUI.Middleware
 
         /// <summary>
         /// Sets the security related headers for all responses (and als the stupid IE compatibility header, you know, IE sucks...).
-        /// If the request is inside the StoryLine/Course folder, than set a seperate CSP header because SL uses a lot of bad practice coding such as inlining JavaScript.
         /// </summary>
         /// <param name="httpContext">The current request's context.</param>
         /// <returns>void</returns>

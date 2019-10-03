@@ -9,6 +9,11 @@ namespace RDPMonWebGUI.Models
     {
         public readonly LiteDatabase Context;
 
+        /// <summary>
+        /// Creates the LiteDatabase and sets it up to be disposed at the end of the request.
+        /// </summary>
+        /// <param name="configs">The LiteDbConfig, containing the DatabasePath to open the database with.</param>
+        /// <param name="context">The IHttpContextAccessor to setup the disposing of the LiteDatabase at the end of a request.</param>
         public LiteDbContext(IOptions<LiteDbConfig> configs, IHttpContextAccessor context)
         {
             try
