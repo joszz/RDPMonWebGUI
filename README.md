@@ -21,21 +21,21 @@ a Windows focussed tool, it makes most sence to run it on Windows.
 
 Currently no builds are provided so you will have to build the website yourself.
 
-First you will need to restore the client side library dependancies. This can be done by running libman in the root of 
+First you will need to restore the client side library dependencies. This can be done by running libman in the root of 
 this project's directory;
 
 ```
 libman restore
 ```
 
-Next we can build/publish the project. This is possible to do with the following command in a Command Prompt or 
+Next we can build/publish the project. This can be done with the following command in a Command or 
 Powershell prompt (when you are inside the root of the project);
 
 ```
 dotnet publish ./RDPMonWebGUI.sln --configuration Release
 ```
 
-You are then able to host the compiled site on IIS or using the .NET Core builtin webserver Kestrel.
+You are then able to host the compiled site on IIS or using the .NET Core built-in webserver Kestrel.
 
 ## Configuration
 
