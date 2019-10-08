@@ -7,17 +7,9 @@ using System.Linq;
 
 namespace RDPMonWebGUI.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
-        private readonly LiteDatabase _database;
-        private readonly int _pageSize;
-
-        public HomeController(LiteDbContext context, IConfiguration configuration)
-        {
-            _database = context.Context;
-
-            int.TryParse(configuration["PageSize"], out _pageSize);
-        }
+        public HomeController(LiteDbContext context, IConfiguration configuration) : base(context, configuration) { }
 
         /// <summary>
         /// Shows the Connections view, listing all the connections in a paged and sorted fashion.

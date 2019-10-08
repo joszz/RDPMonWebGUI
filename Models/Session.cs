@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace RDPMonWebGUI.Models
 {
@@ -10,6 +11,7 @@ namespace RDPMonWebGUI.Models
         public long _id { get; set; }
 
         [NotMapped]
+        [JsonIgnore]
         public object Id
         {
             get
@@ -19,6 +21,7 @@ namespace RDPMonWebGUI.Models
         }
 
         [NotMapped]
+        [JsonIgnore]
         public long Flags { get; set; }
 
         [DisplayName("Started")]
