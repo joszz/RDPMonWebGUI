@@ -1,5 +1,6 @@
 ﻿@{
     string action = ViewContext.RouteData.Values["Action"].ToString();
+    string controller = ViewContext.RouteData.Values["Controller"].ToString();
     string homeLink = Url.RouteUrl("home") + "/";
 }
 <!DOCTYPE html>
@@ -48,6 +49,11 @@
                         </li>
                     </ul>
                 </div>
+
+                @if ((bool)ViewData["login-enabled"] && controller != "Session")
+                {
+                    <a asp-action="Logout" asp-controller="Session" class="btn btn-outline-light icon-sign-out-alt" title="logout"></a>
+                }
             </div>
         </nav>
     </header>

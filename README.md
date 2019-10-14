@@ -49,3 +49,16 @@ Below you find a brief description per setting that is of significance.
 * **PageSize**
 
     This setting controls how many items per page are shown.
+
+* **Password**
+
+    This is an optional setting where you can provide a password. 
+    
+    After changing this value, the first time you hit the webpage, the application will hash this value automatically.
+    It will create an additional setting "PasswordSalt" as well. On authentication it will hash the provided password 
+    and compare it with the stored hash in appsettings.
+
+    If you want to change the password, simply do so by replacing the hashed password with a plaintext one.
+    Next remove the "PasswordSalt" entirely from the appsettings.
+
+    Upon next visit, the application will rehash this value again and create a new "PasswordSalt".
