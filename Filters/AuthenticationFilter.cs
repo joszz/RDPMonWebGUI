@@ -26,6 +26,10 @@ namespace RDPMonWebGUI.Filters
 
         public void OnActionExecuted(ActionExecutedContext context) { }
 
+        /// <summary>
+        /// Called before any action is executed, making sure the user has been loggedin if the application requires login.
+        /// </summary>
+        /// <param name="context">The current context of execution.</param>
         public void OnActionExecuting(ActionExecutingContext context)
         {
             SetPasswordIfChanged();
@@ -39,6 +43,9 @@ namespace RDPMonWebGUI.Filters
             }
         }
 
+        /// <summary>
+        /// Sets the new hash and salted password if there's no PasswordSalt entry in appsettings and the Password entry is available.
+        /// </summary>
         private void SetPasswordIfChanged()
         {
             if (!string.IsNullOrEmpty(_configuration["Password"]) && string.IsNullOrEmpty(_configuration["PasswordSalt"]))

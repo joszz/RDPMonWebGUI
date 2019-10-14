@@ -41,6 +41,10 @@ namespace RDPMonWebGUI.Controllers
             return View();
         }
 
+        /// <summary>
+        /// Will clear the session, effectively login you out.
+        /// </summary>
+        /// <returns>Redirects back to login page.</returns>
         public IActionResult Logout()
         {
             HttpContext.Session.Clear();
@@ -48,6 +52,11 @@ namespace RDPMonWebGUI.Controllers
             return RedirectToAction("Index");
         }
 
+        /// <summary>
+        /// Checks the provided password against the hashed and salted password in the appsettings.
+        /// </summary>
+        /// <param name="password">The user provided password to check.</param>
+        /// <returns>Whether or not the password was verified successfully</returns>
         private bool VerifyPasswordHash(string password)
         {
             if (_configuration["Password"] != null && _configuration["PasswordSalt"] != null)
