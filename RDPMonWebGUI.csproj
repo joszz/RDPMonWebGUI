@@ -3,6 +3,20 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RunPostBuildEvent>Always</RunPostBuildEvent>
+    <Authors>Jos Nienhuis</Authors>
+    <Company>GotGeeks.nl</Company>
+    <Copyright>Jos Nienhuis</Copyright>
+    <PackageProjectUrl>https://github.com/joszz/RDPMonWebGUI</PackageProjectUrl>
+    <PackageIcon>favicon.ico</PackageIcon>
+    <PackageIconUrl />
+    <RepositoryUrl>https://github.com/joszz/RDPMonWebGUI</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <NeutralLanguage>en</NeutralLanguage>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>
@@ -10,6 +24,10 @@
     <Content Remove="wwwroot\css\vendor\**" />
     <EmbeddedResource Remove="wwwroot\css\vendor\**" />
     <None Remove="wwwroot\css\vendor\**" />
+    <None Include="wwwroot\img\favicons\favicon.ico">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
