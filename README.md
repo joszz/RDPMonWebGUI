@@ -1,4 +1,5 @@
 # RDPMonWebGUI
+&copy; 2020, Jos Nienhuis
  
 I created this project to have a web interface for the [great tool RdpMon by Cameyo](https://github.com/cameyo/rdpmon).
 It offers the same functionality as the WinForms application provided by Cameyo. 
