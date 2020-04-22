@@ -124,7 +124,7 @@
       ]
     },
     {
-      "library": "jquery@3.4.1",
+      "library": "jquery@3.5.0",
       "destination": "wwwroot/lib/jquery/",
       "files": [
         "dist/jquery.js",
