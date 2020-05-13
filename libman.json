@@ -3,7 +3,7 @@
   "defaultProvider": "unpkg",
   "libraries": [
     {
-      "library": "bootstrap@4.4.1",
+      "library": "bootstrap@4.5.0",
       "destination": "wwwroot/lib/bootstrap/",
       "files": [
         "scss/mixins/_alert.scss",
@@ -45,6 +45,7 @@
         "scss/utilities/_embed.scss",
         "scss/utilities/_flex.scss",
         "scss/utilities/_float.scss",
+        "scss/utilities/_interactions.scss",
         "scss/utilities/_overflow.scss",
         "scss/utilities/_position.scss",
         "scss/utilities/_screenreaders.scss",
