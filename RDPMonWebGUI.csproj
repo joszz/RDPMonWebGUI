@@ -18,12 +18,25 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
+  
+  <PropertyGroup>
+  
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+  </PropertyGroup>
 
   <ItemGroup>
     <Compile Remove="wwwroot\css\vendor\**" />
     <Content Remove="wwwroot\css\vendor\**" />
     <EmbeddedResource Remove="wwwroot\css\vendor\**" />
     <None Remove="wwwroot\css\vendor\**" />
+    <Content Remove="bundleconfig.json" />
+    <Content Remove="compilerconfig.json" />
+    <Content Remove="libman.json" />
+    <Content Remove="Properties\launchSettings.json" />
+    <None Include="bundleconfig.json" />
+    <None Include="compilerconfig.json" />
+    <None Include="libman.json" />
+    <None Include="Properties\launchSettings.json" />
     <None Include="wwwroot\img\favicons\favicon.ico">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
@@ -36,8 +49,8 @@
     <PackageReference Include="LiteDB" Version="4.1.4" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.6" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.1.6" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.3" />
     <PackageReference Include="Microsoft.Web.LibraryManager.Build" Version="2.1.76" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="NLog" Version="4.7.2" />
     <PackageReference Include="NLog.Extensions.Logging" Version="1.6.4" />
     <PackageReference Include="NLog.Web.AspNetCore" Version="4.9.2" />
