@@ -19,7 +19,7 @@ namespace RDPMonWebGUI.Controllers
         public IActionResult Index()
         {
             ViewData["Title"] = "Login";
-            return View();
+            return View(false);
         }
 
         /// <summary>
@@ -38,7 +38,7 @@ namespace RDPMonWebGUI.Controllers
             }
 
             ViewData["Title"] = "Login";
-            return View();
+            return View(true);
         }
 
         /// <summary>
@@ -59,7 +59,7 @@ namespace RDPMonWebGUI.Controllers
         /// <returns>Whether or not the password was verified successfully</returns>
         private bool VerifyPasswordHash(string password)
         {
-            if (_configuration["Password"] != null && _configuration["PasswordSalt"] != null)
+            if (_configuration["Password"] != null && _configuration["PasswordSalt"] != null && password != null)
             {
                 byte[] salt = Convert.FromBase64String(_configuration["PasswordSalt"]);
                 byte[] passwordHash = Convert.FromBase64String(_configuration["Password"]);

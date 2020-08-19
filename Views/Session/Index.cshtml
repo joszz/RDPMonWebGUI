@@ -1,4 +1,6 @@
-﻿<div class="d-flex justify-content-center align-items-center h-100" id="login">
+﻿@model Boolean;
+
+<div class="d-flex justify-content-center align-items-center h-100" id="login">
     <div class="col-12 col-xl-4">
         <div class="card">
             <div class="card-header text-white bg-success">
@@ -6,7 +8,7 @@
             </div>
             <form method="post" class="card-body">
                 <div class="input-group">
-                    <input type="password" name="password" class="form-control" placeholder="Password" autocomplete="current-password" />
+                    <input type="password" name="password" class="form-control @(Model ? "is-invalid" : null)" placeholder="Password" autocomplete="current-password" />
                     <div class="input-group-append">
                         <input type="submit" class="btn btn-success" value="Submit" />
                     </div>
