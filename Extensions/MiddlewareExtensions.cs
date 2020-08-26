@@ -25,5 +25,13 @@ namespace RDPMonWebGUI.Extensions
         /// <returns>IApplicationBuilder to chain calls.</returns>
         public static IApplicationBuilder UseSecurityHeaders(this IApplicationBuilder builder) =>
             builder.UseMiddleware<SecurityHeaders>();
+
+        /// <summary>
+        /// An extension method for IApplicationBuilder to start a stopwatch to measure entire page generation time.
+        /// </summary>
+        /// <param name="builder">The applicationbuilder injected in the startup class.</param>
+        /// <returns>IApplicationBuilder to chain calls.</returns>
+        public static IApplicationBuilder UseTimer(this IApplicationBuilder builder) =>
+            builder.UseMiddleware<Timer>();
     }
 }

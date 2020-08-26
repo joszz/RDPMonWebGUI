@@ -1,4 +1,5 @@
-﻿@{
+﻿@using System.Diagnostics;
+@{
     string action = ViewContext.RouteData.Values["Action"].ToString();
     string controller = ViewContext.RouteData.Values["Controller"].ToString();
     string homeLink = Url.RouteUrl("home") + "/";
@@ -66,7 +67,19 @@
 
     <footer class="navbar navbar-dark bg-dark w-100 fixed-bottom">
         <div class="container">
-            <a href="https://github.com/joszz/RDPMonWebGUI" target="_blank" class="text-white text-decoration-none">&copy; @DateTime.Now.Year - Jos Nienhuis</a>
+            <div>
+                @{
+                    Stopwatch stopwatch = ((Stopwatch)Context.Items["stopwatch"]);
+                    stopwatch.Stop();
+
+                    TimeSpan ts = stopwatch.Elapsed;
+                    double elapsed = (double)ts.Milliseconds / 1000;
+                    string elapsedTime = String.Format("{0}s", elapsed.ToString());
+                }
+
+                <a href="https://github.com/joszz/RDPMonWebGUI" target="_blank" class="text-white text-decoration-none">&copy; @DateTime.Now.Year - Jos Nienhuis</a> |
+                @elapsedTime |  Version: @typeof(RDPMonWebGUI.Program).Assembly.GetName().Version
+            </div>
         </div>
     </footer>
 </body>
