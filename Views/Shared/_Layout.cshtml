@@ -76,8 +76,10 @@
                     double elapsed = (double)ts.Milliseconds / 1000;
                     string elapsedTime = String.Format("{0}s", elapsed.ToString());
                 }
-                <a href="https://github.com/joszz/RDPMonWebGUI" target="_blank" class="text-white text-decoration-none">&copy; @DateTime.Now.Year - Jos Nienhuis</a> |
-                Execution time: @elapsedTime | Version: @typeof(RDPMonWebGUI.Program).Assembly.GetName().Version
+                <a href="https://github.com/joszz/RDPMonWebGUI" target="_blank" class="text-white text-decoration-none">&copy; @DateTime.Now.Year - Jos Nienhuis</a>
+                <span class="d-none d-sm-inline">
+                    | Execution time: @elapsedTime | Version: @typeof(RDPMonWebGUI.Program).Assembly.GetName().Version
+                </span>
             </div>
         </div>
     </footer>
