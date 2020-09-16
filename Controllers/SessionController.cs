@@ -82,5 +82,17 @@ namespace RDPMonWebGUI.Controllers
 
             return false;
         }
+
+        public IActionResult Manifest()
+        {
+            HttpContext.Response.Headers["Content-Type"] = "application/manifest+json; charset=UTF-8";
+            return View();
+        }
+
+        public IActionResult ServiceWorker()
+        {
+            HttpContext.Response.Headers["Service-Worker-allowed"] = "../";
+            return File("/js/worker.min.js", "text/javascript");
+        }
     }
 }
