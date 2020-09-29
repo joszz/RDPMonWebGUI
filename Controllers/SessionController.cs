@@ -34,7 +34,7 @@ namespace RDPMonWebGUI.Controllers
             if (VerifyPasswordHash(password))
             {
                 HttpContext.Session.SetString("loggedin", "true");
-                return RedirectToAction("Index", "Home");
+                return Redirect("~/");
             }
 
             ViewData["Title"] = "Login";

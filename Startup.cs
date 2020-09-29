@@ -34,7 +34,6 @@ namespace RDPMonWebGUI
             });
             services.Configure<RouteOptions>(options => options.AppendTrailingSlash = true);
 
-
             services.AddLiteDb(_configuration.GetConnectionString("RDPMon"));
             services.AddAntiforgery();
             services.AddMemoryCache();
@@ -91,7 +90,7 @@ namespace RDPMonWebGUI
             {
                 endpoints.MapControllerRoute(
                     name: "home",
-                    pattern: "/",
+                    pattern: "~/",
                     new { Controller = "Home", Action = "Index" }
                 );
                 endpoints.MapControllerRoute(

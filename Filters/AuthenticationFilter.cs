@@ -37,7 +37,8 @@ namespace RDPMonWebGUI.Filters
             bool loginEnabled = !string.IsNullOrEmpty(_configuration["Password"]);
             ((Controller)context.Controller).ViewData["login-enabled"] = loginEnabled;
 
-            if (loginEnabled && string.IsNullOrEmpty(context.HttpContext.Session.GetString("loggedin")) && context.Controller.GetType() != typeof(SessionController))
+            if (loginEnabled && string.IsNullOrEmpty(context.HttpContext.Session.GetString("loggedin")) &&
+                context.Controller.GetType() != typeof(SessionController) && context.Controller.GetType() != typeof(ErrorController))
             {
                 context.Result = ((Controller)context.Controller).RedirectToAction("Index", "Session");
             }
