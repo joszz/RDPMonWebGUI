@@ -82,7 +82,6 @@ namespace RDPMonWebGUI
                     ctx.Context.Response.Headers[Microsoft.Net.Http.Headers.HeaderNames.CacheControl] = "public,max-age=604800";
                 }
             };
-            ((FileExtensionContentTypeProvider)staticFileOptions.ContentTypeProvider).Mappings.Add(new KeyValuePair<string, string>(".webmanifest", "application/manifest+json"));
             app.UseStaticFiles(staticFileOptions);
 
             app.UseRouting();
