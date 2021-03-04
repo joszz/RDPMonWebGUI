@@ -73,7 +73,7 @@ namespace RDPMonWebGUI
             app.UseSession();
             app.UseSecurityHeaders();
 
-            StaticFileOptions staticFileOptions = new StaticFileOptions
+            StaticFileOptions staticFileOptions = new()
             {
                 ContentTypeProvider = new FileExtensionContentTypeProvider(),
                 OnPrepareResponse = ctx =>
