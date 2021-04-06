@@ -49,13 +49,13 @@
     <PackageReference Include="BuildBundlerMinifier" Version="3.2.449" />
     <PackageReference Include="BuildWebCompiler" Version="1.12.405" />
     <PackageReference Include="LiteDB" Version="4.1.4" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.5" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="5.0.0" />
     <PackageReference Include="Microsoft.Web.LibraryManager.Build" Version="2.1.113" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="NLog" Version="4.7.9" />
     <PackageReference Include="NLog.Extensions.Logging" Version="1.7.2" />
-    <PackageReference Include="NLog.Web.AspNetCore" Version="4.11.0" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="4.12.0" />
   </ItemGroup>
 
   <ItemGroup>
