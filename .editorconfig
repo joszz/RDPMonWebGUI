@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# HAA0301: Closure Allocation Source
+dotnet_diagnostic.HAA0301.severity = suggestion

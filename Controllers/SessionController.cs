@@ -64,7 +64,8 @@ namespace RDPMonWebGUI.Controllers
                 byte[] salt = Convert.FromBase64String(_configuration["PasswordSalt"]);
                 byte[] passwordHash = Convert.FromBase64String(_configuration["Password"]);
 
-                using (var hmac = new HMACSHA512(salt))
+                HMACSHA512 hMACSHA512 = new(salt);
+                using (var hmac = hMACSHA512)
                 {
                     byte[] computedHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password));
 

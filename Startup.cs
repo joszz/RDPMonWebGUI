@@ -9,7 +9,6 @@ using Microsoft.Extensions.Hosting;
 using RDPMonWebGUI.Extensions;
 using RDPMonWebGUI.Filters;
 using System;
-using System.Collections.Generic;
 
 namespace RDPMonWebGUI
 {
@@ -43,7 +42,11 @@ namespace RDPMonWebGUI
                 options.MaxAge = TimeSpan.FromDays(365);
             });
 
-            services.AddControllersWithViews(config => config.Filters.Add(new AuthenticationFilter(_configuration, _environment))).AddRazorRuntimeCompilation();
+            services.AddControllersWithViews(config =>
+            {
+                AuthenticationFilter filter = new(_configuration, _environment);
+                config.Filters.Add(filter);
+            }).AddRazorRuntimeCompilation();
             services.AddSession(options =>
             {
                 options.Cookie.IsEssential = true;
@@ -73,9 +76,10 @@ namespace RDPMonWebGUI
             app.UseSession();
             app.UseSecurityHeaders();
 
+            FileExtensionContentTypeProvider contentTypeProvider = new();
             StaticFileOptions staticFileOptions = new()
             {
-                ContentTypeProvider = new FileExtensionContentTypeProvider(),
+                ContentTypeProvider = contentTypeProvider,
                 OnPrepareResponse = ctx =>
                 {
                     //Cache static files for a week

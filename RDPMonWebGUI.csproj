@@ -24,6 +24,8 @@
     <Version>1.1.0</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <UserSecretsId>01460183-e12f-43e8-b4bd-1e7a6d188df1</UserSecretsId>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <FileVersion>1.2.0.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -35,6 +37,10 @@
     <Content Remove="compilerconfig.json" />
     <Content Remove="libman.json" />
     <Content Remove="Properties\launchSettings.json" />
+    <Content Remove="wwwroot\js\site.min.js" />
+    <Content Remove="wwwroot\js\site.min.js.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\js\site.min.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\js\site.min.js.map" />
     <None Include="bundleconfig.json" />
     <None Include="compilerconfig.json" />
     <None Include="libman.json" />
@@ -43,17 +49,22 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
+    <None Include="wwwroot\js\site.min.js" />
+    <None Include="wwwroot\js\site.min.js.map" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="BuildBundlerMinifier" Version="3.2.449" />
     <PackageReference Include="BuildWebCompiler" Version="1.12.405" />
+    <PackageReference Include="ClrHeapAllocationAnalyzer" Version="3.0.0" />
     <PackageReference Include="LiteDB" Version="4.1.4" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.6" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Common" Version="3.9.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.9.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="5.0.0" />
     <PackageReference Include="Microsoft.Web.LibraryManager.Build" Version="2.1.113" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-    <PackageReference Include="NLog" Version="4.7.9" />
+    <PackageReference Include="NLog" Version="4.7.10" />
     <PackageReference Include="NLog.Extensions.Logging" Version="1.7.2" />
     <PackageReference Include="NLog.Web.AspNetCore" Version="4.12.0" />
   </ItemGroup>

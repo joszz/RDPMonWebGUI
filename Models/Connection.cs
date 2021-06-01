@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RDPMonWebGUI.Attributes;
+using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
@@ -45,6 +46,7 @@ namespace RDPMonWebGUI.Models
         public DateTime Last { get; set; }
 
         [DisplayName("Logins")]
+        [DisableSort]
         public string[] UserNames { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using RDPMonWebGUI.Extensions;
+﻿using RDPMonWebGUI.Attributes;
+using RDPMonWebGUI.Extensions;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -160,6 +161,16 @@ namespace RDPMonWebGUI.ViewModels
         public string GetSortIconForField(string field)
         {
             return field == SortField && SortDirection == "asc" ? "sort-down" : "sort-up";
+        }
+
+        /// <summary>
+        /// Whether a field can be sorted or not.
+        /// </summary>
+        /// <param name="field">The field to check the presence of a DisableSortAttribute for.</param>
+        /// <returns>Whether a field can be sorted or not</returns>
+        public bool IsSortable(string field)
+        {
+            return ModelType.GetProperties().FirstOrDefault(prop => prop.Name == field).GetCustomAttributes<DisableSortAttribute>(true).FirstOrDefault() == null;
         }
 
         /// <summary>

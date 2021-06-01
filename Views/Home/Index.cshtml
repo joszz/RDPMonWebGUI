@@ -13,9 +13,16 @@
                     @foreach (KeyValuePair<string, string> pair in Model.Headers)
                     {
                         <th>
-                            <a asp-route-SortField="@pair.Key" asp-route-SortDirection="@Model.GetSortDirectionForField(pair.Key)" class="icon-@Model.GetSortIconForField(pair.Key)">
+                            @if (Model.IsSortable(pair.Key))
+                            {
+                                <a asp-route-SortField="@pair.Key" asp-route-SortDirection="@Model.GetSortDirectionForField(pair.Key)" class="icon-@Model.GetSortIconForField(pair.Key) text-decoration-none">
+                                    <span>@pair.Value</span>
+                                </a>
+                            }
+                            else
+                            {
                                 <span>@pair.Value</span>
-                            </a>
+                            }
                         </th>
                     }
 

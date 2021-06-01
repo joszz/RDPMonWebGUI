@@ -71,9 +71,14 @@ namespace RDPMonWebGUI.Extensions
                 var selector = Expression.Lambda<Func<TSource, DateTime?>>(expression, parameter);
                 query = methodName == "OrderBy" ? query.OrderBy(selector) : query.OrderByDescending(selector);
             }
-            else if (propertyInfo.PropertyType == typeof(int))
+            else if (propertyInfo.PropertyType == typeof(int) )
             {
                 var selector = Expression.Lambda<Func<TSource, int>>(expression, parameter);
+                query = methodName == "OrderBy" ? query.OrderBy(selector) : query.OrderByDescending(selector);
+            }
+            else if (propertyInfo.PropertyType == typeof(Int64))
+            {
+                var selector = Expression.Lambda<Func<TSource, Int64>>(expression, parameter);
                 query = methodName == "OrderBy" ? query.OrderBy(selector) : query.OrderByDescending(selector);
             }
             else if (propertyInfo.PropertyType == typeof(bool))
