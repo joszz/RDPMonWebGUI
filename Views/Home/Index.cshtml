@@ -28,7 +28,7 @@
 
                     @if (Model.RecordActionButtons.Count != 0)
                     {
-                        <th class="text-right">Actions</th>
+                        <th class="text-end">Actions</th>
                     }
                 </tr>
             </thead>
@@ -44,7 +44,7 @@
 
                         @foreach (RecordActionButton btn in Model.RecordActionButtons)
                         {
-                            <td class="text-right">
+                            <td class="text-end">
                                 <a href="@Url.ActionLink(btn.Action, btn.Controller, new { id = record.Id })" @(string.Join(' ', btn.Attributes)) class="@btn.CssClass"></a>
                             </td>
                         }

@@ -16,7 +16,12 @@
         <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 
         <script defer src="~/lib/jquery/dist/jquery.js" asp-append-version="true"></script>
-        <script defer src="~/lib/bootstrap/dist/js/bootstrap.js" asp-append-version="true"></script>
+        <script defer src="~/lib/bootstrap/js/dist/dom/data.js" asp-append-version="true"></script>
+        <script defer src="~/lib/bootstrap/js/dist/dom/manipulator.js" asp-append-version="true"></script>
+        <script defer src="~/lib/bootstrap/js/dist/dom/selector-engine.js" asp-append-version="true"></script>
+        <script defer src="~/lib/bootstrap/js/dist/dom/event-handler.js" asp-append-version="true"></script>
+        <script defer src="~/lib/bootstrap/js/dist/base-component.js" asp-append-version="true"></script>
+        <script defer src="~/lib/bootstrap/js/dist/collapse.js" asp-append-version="true"></script>
         <script defer src="~/lib/fancybox/jquery.fancybox.js" asp-append-version="true"></script>
         <script defer src="~/js/site.js" asp-append-version="true"></script>
     </environment>
@@ -36,7 +41,7 @@
             <div class="container">
                 <a class="navbar-brand" href="@homeLink">RDPMonWebGUI</a>
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
