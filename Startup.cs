@@ -92,13 +92,13 @@ namespace RDPMonWebGUI
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{SortField?}/{SortDirection?}");
+                endpoints.MapControllerRoute(
                     name: "home",
                     pattern: "~/",
                     new { Controller = "Home", Action = "Index" }
                 );
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
