@@ -35,9 +35,9 @@
 
     <partial name="_Favicons" />
 </head>
-<body class="d-flex flex-column" data-baseuri="@homeLink">
+<body class="d-flex flex-column" id="maincontent" data-baseuri="@homeLink">
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark fixed-top">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="@homeLink">RDPMonWebGUI</a>
 
@@ -70,7 +70,7 @@
         </main>
     </div>
 
-    <footer class="navbar navbar-dark bg-dark w-100 fixed-bottom">
+    <footer class="navbar navbar-dark bg-dark w-100 fixed-bottom text-muted">
         <div class="container">
             <div>
                 @{
@@ -81,7 +81,7 @@
                     double elapsed = (double)ts.Milliseconds / 1000;
                     string elapsedTime = String.Format("{0}s", elapsed.ToString());
                 }
-                <a href="https://github.com/joszz/RDPMonWebGUI" target="_blank" class="text-white text-decoration-none">&copy; @DateTime.Now.Year - Jos Nienhuis</a>
+                <a href="https://github.com/joszz/RDPMonWebGUI" target="_blank" class="text-muted text-decoration-none">&copy; @DateTime.Now.Year - Jos Nienhuis</a>
                 <span class="d-none d-sm-inline">
                     | Execution time: @elapsedTime | Version: @typeof(RDPMonWebGUI.Program).Assembly.GetName().Version
                 </span>

@@ -1,7 +1,4 @@
-﻿@import "../lib/bootstrap/scss/functions";
-@import "../lib/bootstrap/scss/variables";
-
-$font-family-base: Roboto-Regular, Arial;
+﻿$font-family-base: Roboto-Regular, Arial;
 
 @import "../lib/bootstrap/scss/bootstrap-utilities";
 @import "../lib/bootstrap/scss/functions";
@@ -41,6 +38,14 @@ $font-family-base: Roboto-Regular, Arial;
 //@import "../lib/bootstrap/scss/spinners";
 //@import "../lib/bootstrap/scss/offcanvas";
 
+// Helpers
+@import "../lib/bootstrap/scss/helpers";
+
+// Utilities
+@import "../lib/bootstrap/scss/utilities/api";
+
+@import "variables";
 @import "general";
+@import "navbar";
 @import "login";
 @import "icons";
