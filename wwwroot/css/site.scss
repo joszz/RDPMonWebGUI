@@ -1,4 +1,4 @@
-﻿$font-family-base: Roboto, Arial;
+﻿@import "variables";
 
 @import "../lib/bootstrap/scss/bootstrap-utilities";
 @import "../lib/bootstrap/scss/functions";
@@ -44,7 +44,7 @@
 // Utilities
 @import "../lib/bootstrap/scss/utilities/api";
 
-@import "variables";
+
 @import "general";
 @import "navbar";
 @import "login";
