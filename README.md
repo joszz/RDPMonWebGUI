@@ -1,5 +1,5 @@
 # RDPMonWebGUI
-&copy; 2020, Jos Nienhuis
+&copy; 2021, Jos Nienhuis
  
 I created this project to have a web interface for the [great tool RdpMon by Cameyo](https://github.com/cameyo/rdpmon).
 It offers the same functionality as the WinForms application provided by Cameyo. 
@@ -9,7 +9,7 @@ a Windows focussed tool, it makes most sence to run it on Windows.
 
 ## Prerequisites
 
-* **[.NET Core 3 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0)**
+* **[.NET Core 5 SDK](https://dotnet.microsoft.com/download/dotnet/5.0)**
 * If using IIS: **.NET Core: Runtime &amp; Hosting Bundle** (see link above)
 * **[Libman](https://github.com/aspnet/LibraryManager/wiki/Using-LibMan-CLI#get-the-libman-global-tool)**
 
