@@ -15,7 +15,7 @@ public class LiteDbContext
     {
         try
         {
-            LiteDatabase database = new LiteDatabase(configs.Value.DatabasePath);
+            LiteDatabase database = new(configs.Value.DatabasePath);
 
             if (database != null)
             {

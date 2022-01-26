@@ -2,7 +2,7 @@
 
 public class ErrorViewModel
 {
-    private Dictionary<int, string> StatusCodeMessages { get; set; } = new Dictionary<int, string>
+    private Dictionary<int, string> StatusCodeMessages { get; } = new Dictionary<int, string>
         {
             { 404, "Page not found!"}
         };

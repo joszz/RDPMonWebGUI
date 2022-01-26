@@ -4,7 +4,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
 
 namespace RDPMonWebGUI.Models;
-
 public class Connection : IModel
 {
     [DisplayName("IP")]

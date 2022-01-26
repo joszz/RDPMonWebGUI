@@ -51,7 +51,7 @@ public class AuthenticationFilter : IActionFilter
             string physicalPath = fileInfo.PhysicalPath;
             JObject jObject = JsonConvert.DeserializeObject<JObject>(System.IO.File.ReadAllText(physicalPath));
 
-            using (HMACSHA512 hmac = new HMACSHA512())
+            using (HMACSHA512 hmac = new())
             {
                 jObject["PasswordSalt"] = Convert.ToBase64String(hmac.Key);
                 jObject["Password"] = Convert.ToBase64String(hmac.ComputeHash(Encoding.UTF8.GetBytes(_configuration["Password"])));

@@ -12,6 +12,6 @@ public class BaseController : Controller
         _configuration = configuration;
         _database = context.Context;
 
-        int.TryParse(configuration["PageSize"], out _pageSize);
+        _ = int.TryParse(configuration["PageSize"], out _pageSize);
     }
 }

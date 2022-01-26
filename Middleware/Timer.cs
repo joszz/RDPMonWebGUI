@@ -19,7 +19,7 @@ public class Timer
     /// <returns>void</returns>
     public async Task Invoke(HttpContext httpContext)
     {
-        Stopwatch stopwatch = new Stopwatch();
+        Stopwatch stopwatch = new();
         stopwatch.Start();
         httpContext.Items["stopwatch"] = stopwatch;
         await _next(httpContext);

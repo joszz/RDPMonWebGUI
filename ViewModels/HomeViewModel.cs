@@ -14,7 +14,6 @@ public class HomeViewModel
     /// </summary>
     public string Title { get; set; }
 
-
     /// <summary>
     /// The field to sort the list on.
     /// </summary>
@@ -94,7 +93,7 @@ public class HomeViewModel
         }
     }
 
-    private Dictionary<string, string> _headers = new Dictionary<string, string>();
+    private readonly Dictionary<string, string> _headers = new();
     /// <summary>
     /// The headers for the List of Records. Retrieved from the Properties and retrieved by the DisplayNameAttribute if set, otherwise the property.name.
     /// </summary>
@@ -132,10 +131,10 @@ public class HomeViewModel
     /// <returns>The value retrieved for the record.</returns>
     public object GetValueForRecord(object record, string propertyName)
     {
-        PropertyInfo property = Properties.FirstOrDefault(property => property.Name == propertyName);
+        PropertyInfo property = Properties.Find(property => property.Name == propertyName);
         object value = property.GetValue(record);
 
-        return value is IEnumerable<string> ? string.Join(", ", (IEnumerable<string>)value) : value;
+        return value is IEnumerable<string> enumerable ? string.Join(", ", enumerable) : value;
     }
 
     /// <summary>
@@ -167,7 +166,7 @@ public class HomeViewModel
     /// <returns>Whether a field can be sorted or not</returns>
     public bool IsSortable(string field)
     {
-        return ModelType.GetProperties().FirstOrDefault(prop => prop.Name == field).GetCustomAttributes<DisableSortAttribute>(true).FirstOrDefault() == null;
+        return !Array.Find(ModelType.GetProperties(), prop => prop.Name == field).GetCustomAttributes<DisableSortAttribute>(true).Any();
     }
 
     /// <summary>
