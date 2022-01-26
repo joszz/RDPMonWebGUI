@@ -1,8 +1,6 @@
-﻿using System;
+﻿namespace RDPMonWebGUI.Attributes;
 
-namespace RDPMonWebGUI.Attributes
+[AttributeUsage(AttributeTargets.All, AllowMultiple = false)]
+public class DisableSortAttribute : Attribute
 {
-    public class DisableSortAttribute : Attribute
-    {
-    }
 }

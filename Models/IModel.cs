@@ -1,10 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace RDPMonWebGUI.Models
+namespace RDPMonWebGUI.Models;
+
+public interface IModel
 {
-    public interface IModel
-    {
-        [NotMapped]
-        public object Id { get; }
-    }
+    [NotMapped]
+    public object Id { get; }
 }
